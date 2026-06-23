@@ -1,0 +1,39 @@
+<script>
+    const myfunction=function()
+    {
+        document.write("Anonymous Function(Es6)")
+    }
+    myfunction()
+    document.write("<br>")
+    const myarrow=()=>
+    {
+        document.write("Arrow Function(Es6)")
+    }
+    myarrow();
+    
+    (function() 
+    {
+        document.write("immediately invoked function(Es6---1)")
+    })()
+
+    function myouter()
+    {
+        let a=12
+        function myinner()
+        {
+            document.write(a)
+        }
+        myinner()
+    }
+    document.write("<br>")
+    function mycallfunction(str,callback)
+    {
+        document.write("====> string= = ",str)
+        callback()
+    }
+    function callback()
+    {
+        document.write("=====callback======")
+    }
+    mycallfunction("Demo",callback)
+</script>

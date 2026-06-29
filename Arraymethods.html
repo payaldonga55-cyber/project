@@ -1,0 +1,127 @@
+<script>
+    let a=[10,20,30,40,50]
+    let b=[60,70,80,90,100]
+    document.write("<h2>ARRAY METHODS</h2>")
+
+    //array length.....1
+    document.write("Length array:&nbsp",a.length)
+
+    //array concat.....2
+    let c=a.concat(b)
+    document.write("<br>concate :&nbsp ",c)
+
+    //copy within......3
+    document.write("<br>copywithin :&nbsp",a.copyWithin(0,4))
+
+    //entries.......4
+    let d=b.entries()
+    for(let i of d)
+    {
+        document.write("<br>Entries:",i)
+    }
+    let A=["A","B","C","D","E"]    
+    for(let [index,value] of A.entries())
+    {
+        document.write("<br>Entries:",[index,value])
+    }
+
+    //every........5
+    let e=a.every(a=> a>5)
+    document.write("<br> array a is greater than 5 :&nbsp ",e)
+
+    //fill.........6
+    b.fill(70,1,3)
+    document.write("<br>",b)
+
+    //filter.......7
+    let num=[1,2,3,4,5,6,7,8,9,10]
+    even=num.filter(num=>num%2===0)
+    document.write("<br> Filter Even:&nbsp",even)
+    
+    //find.....8
+    let val=num.find(num=>num>=5)
+    document.write("<br> Find Function:&nbsp",val)
+
+    //findindex...9
+    let index= num.findIndex(num=>num>6)
+    document.write("<br>Find Index :&nbsp",index)
+    
+    //flat......10
+    let Arr=[1,[2,[3,[4,]]]]
+    flt=Arr.flat(Infinity)
+    document.write("<br>Flat :&nbsp",flt)
+    
+    //flat map....11
+
+    //for each....12
+    
+    //includes......13
+    document.write("<br>Includes :&nbsp",b.includes(70))
+
+    //index of....14
+    document.write("<br>Index of :&nbsp",b.indexOf(100))
+
+    //join......15
+    document.write("<br>join :&nbsp",b.join(" | "))
+
+    //keys......16
+    let product=["Laptop","Mouse","keyboard","pendrive"]
+    for(let ind of product.keys())
+    {
+        document.write("<br> Product:",(ind+1),":",product[ind])
+    }
+
+    //last index of...17
+    document.write("<br>Last Index of :&nbsp",b.lastIndexOf(70))
+
+    //map.............18
+    
+    //pop.............19
+    document.write("<br>pop remove last item :&nbsp",product.pop())
+    document.write("<br>product:",product)
+
+    //push............20
+    document.write("<br>Push Add element last:",product.push("pendrive"))
+    document.write("<br>product:",product)
+
+    //reduce.........21
+
+    //reduceRight......22
+
+    //reverse..........23
+    document.write("<br> Reverse:",b.reverse())
+
+    //shift..........24
+    product.shift()
+    document.write(product)
+    let arr=[10,20,30,40,50]
+
+    //slice......25
+    let s=arr.slice(1,3)
+    document.write(s)
+
+    //some.......26
+    let arr2=[60,70,80,90,100]
+    let result = arr2.some(function(max)
+    {
+        return max>=70
+    }
+    )
+    document.write("<br>",result)
+
+    //sort.......27
+    let arr3=[23,5,6,74,1,2,45,0]
+    arr3.sort(function(a,b)
+    {
+        return a-b
+    })
+    document.write("<br>",arr3)
+    arr3.sort(function(a,b)
+    {
+        return b-a
+    })
+    document.write("<br>",arr3)
+    let st=["Z","B","L","D","C","A"]
+    st.sort()
+    document.write("<br>",st)
+</script>

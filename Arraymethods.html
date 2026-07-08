@@ -124,4 +124,35 @@
     let st=["Z","B","L","D","C","A"]
     st.sort()
     document.write("<br>",st)
+
+     //splice........28
+let remove=st.splice(1,2)
+document.write("<br>Splice:-",st)
+document.write("<br>  remove element:",remove)
+st.splice(4,0,"B","C")
+document.write("<br>Add element:",st)
+st.splice(2,1,"E")
+document.write("<br>Replace element:",st)
+
+//tolocalestring......29
+let n=1234567
+document.write("<br>",n.toLocaleString())
+document.write("<br>",n.toLocaleString("en-US"))
+let price=250000
+document.write("<br>",price.toLocaleString("en-UN",{style:"currency",currency:"USD"}))
+let today = new date();
+document.write(today.toLocaleString("en-IN"))
+
+//tostring.......30
+let str=["a","b","c"]
+document.write("<br> hello",str.toString())
+
+//unshift........31
+console.log(str.unshift("D","E"))
+
+//value
+let student={name:demo,age:23}
+let v=Object.values(student)
+document.write(v)
 </script>
+

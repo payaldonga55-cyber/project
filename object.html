@@ -1,9 +1,14 @@
 <script>
-    document.write("object")
+    console.log("object")
     let b={name:"Demo",age:23,mo:1231231235}
-    document.write("Name",b.name)
-    document.write("<br>Age" ,b.age)
+    console.log("Name",b.name)
+    console.log("<br>Age" ,b.age)
     delete b.mo
-    document.write("<br>mo" ,b.mo) 
+    console.log("<br> mo" ,b.mo) 
+
+    for(let i in b)
+    {
+        console.log(i,"==>",b[i])
+    }
 
 </script>

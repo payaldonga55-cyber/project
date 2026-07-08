@@ -1,21 +1,23 @@
 <script>
+    //anonymous function
     const myfunction=function()
     {
         document.write("Anonymous Function(Es6)")
     }
     myfunction()
+    //arrow function
     document.write("<br>")
     const myarrow=()=>
     {
         document.write("Arrow Function(Es6)")
     }
     myarrow();
-    
+    //immediately function
     (function() 
     {
         document.write("immediately invoked function(Es6---1)")
     })()
-
+    //closures function
     function myouter()
     {
         let a=12
@@ -25,6 +27,7 @@
         }
         myinner()
     }
+    //callback function
     document.write("<br>")
     function mycallfunction(str,callback)
     {

@@ -1,4 +1,29 @@
 <script>
-    document.write("<h2>String Methods</h2>")    
-    
+document.write("<h2>String Methods</h2>")    
+let s="Hello😀"
+let t="welcome"
+
+//charat......1
+console.log(s.charAt(4))
+//charCodeAt...2
+console.log(s.charCodeAt(0))
+//codepointAt....3
+console.log(s.codePointAt(5))
+//concat........4
+let c=s.concat(t)
+console.log("concat:",c)
+//endwith.......5
+console.log("endwith",c.endsWith("come"))
+//includes......6
+console.log("include:",c.includes("we"))
+let a = "Hello😀cdmi"
+let b = "welcome welcome"
+//indexof.....7
+console.log(a.indexOf("cdmi"))
+//lastindexof.....8
+console.log("Last index of",b.lastIndexOf("come"))
+//length
+console.log(b.length)
+//locale compare
+
 </script>

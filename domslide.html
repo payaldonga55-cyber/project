@@ -1,17 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="domoslide.css">
+</head>
+<body>
+    <div id="sidemenu" class="sidenav">
+    <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="">About</a>
+    <a href="">Service</a>
+    <a href="">contact</a>
+</div>
+<button onclick="openNav()" style="color: rgb(242, 244, 248); background-color: black;">Open</button>
+
+</body>
+</html>
 <script>
-    function right()
-    {
-        let i=document.getElementById('change')
-        i.style.textAlign='right'
-      
+    function openNav() {
+     document.getElementById("sidemenu").style.width = "250px"
     }
-     function left()
-    {
-        let i=document.getElementById('change')
-        i.style.textAlign='left'
-      
+    function closeNav() {
+    document.getElementById("sidemenu").style.width = "0"
     }
+
 </script>
-<button onclick="right()" >Open</button>
-<button onclick="left()"> close </button>
-<p id="change" style="align-items:baseline">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+

@@ -2,7 +2,6 @@
 document.write("<h2>String Methods</h2>")    
 let s="Hello😀"
 let t="welcome"
-
 //charat......1
 console.log(s.charAt(4))
 //charCodeAt...2
@@ -22,8 +21,27 @@ let b = "welcome welcome"
 console.log(a.indexOf("cdmi"))
 //lastindexof.....8
 console.log("Last index of",b.lastIndexOf("come"))
-//length
+//length........9
 console.log(b.length)
-//locale compare
-
+//locale compare...10
+console.log(s.localeCompare(t))
+//match............11
+console.log(s.match("H"))
+//matchall........12
+console.log(t.matchAll("/welcome/g"))
+//normalize.......13
+//padend..........14
+console.log(s.padEnd(10,"*"))
+//padstrat.........15
+console.log(s.padStart(10,"#"))
+//repeat........16
+console.log("-".repeat(50))
+console.log(s.repeat(5))
+//replace........17
+let d = t.replace("welcome","Cdmi")
+console.log(b)
+//search......18
+console.log(t.search("come"))
+//slice........19
+console.log(t.slice(3,7))
 </script>

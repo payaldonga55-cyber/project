@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tab Navigation</title>
+<link rel="stylesheet" href="domtab.css">
+<style>
+</style>
+
+</head>
+<body>
+
+
+
+<div class="tabs">
+    <button onclick="openTab('home')">Home</button>
+    <button onclick="openTab('about')">About</button>
+    <button onclick="openTab('contact')">Contact</button>
+</div>
+
+<div id="home" class="tab-content">
+    <h3>Home</h3>
+    <p>Welcome to the Home page.</p>
+</div>
+
+<div id="about" class="tab-content">
+    <h3>About</h3>
+    <p>This is the About page.</p>
+</div>
+
+<div id="contact" class="tab-content">
+    <h3>Contact</h3>
+    <p>Email: demo@example.com</p>
+</div>
+
+<script>
+
+function openTab(tabName){
+
+    
+    document.getElementById("home").style.display = "none";
+    document.getElementById("about").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+
+    document.getElementById(tabName).style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>

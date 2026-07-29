@@ -1,0 +1,29 @@
+
+body{
+    font-family: Arial, sans-serif;
+    margin:40px;
+}
+
+.tabs button{
+    padding:10px 20px;
+    margin-right:5px;
+    cursor:pointer;
+    border:none;
+    background:#3498db;
+    color:white;
+    border-radius:5px;
+}
+
+.tabs button:hover{
+    background:#2980b9;
+}
+
+.tab-content{
+    display:none;
+    border:1px solid #ccc;
+    padding:20px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+

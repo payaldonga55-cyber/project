@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbarmediaqry.css">   
+    <title>Document</title    
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <a href=""><img src="creative-logo-blue.svg" alt=""></a>
+    </div>
+    <div class="menu-btn" id="menuBtn">
+        ☰
+    </div>
+    <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<script>
+    let menuBtn = document.getElementById("menuBtn");
+    let menu = document.getElementById("menu");
+    menuBtn.addEventListener("click", function ()
+    {
+        if (menu.classList.contains("show"))
+        {
+            menu.classList.remove("show");
+        }
+        else 
+        {
+            menu.classList.add("show");
+        }
+    });
+</script>
+</body>
+</html>

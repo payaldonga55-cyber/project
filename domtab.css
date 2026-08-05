@@ -25,5 +25,7 @@ body{
     margin-top:20px;
     border-radius:5px;
 }
-
+#home{
+    display: block;
+}
 

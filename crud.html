@@ -1,0 +1,89 @@
+<!-- Input handle
+crud
+create
+read
+update
+delete -->
+
+<script>
+
+    let list = []
+    let editId = null
+    function createData() {
+        const name = document.getElementById('name').value
+        const surname = document.getElementById('surname').value
+
+        const obj = { name, surname }
+
+        if (!name) {
+            document.getElementById('name-error').innerText = 'Enter name'
+        }
+        else {
+            document.getElementById('name-error').innerText = ''
+        }
+        if (!surname) {
+            document.getElementById('surname-error').innerText = 'Enter surname'
+        }
+        else {
+            document.getElementById('surname-error').innerText = ''
+        }
+
+        if (name && surname) {
+            if (editId != null) {
+                list[editId] = obj
+                editId = null
+            }
+            else
+            {
+                list.push(obj)
+            }
+            dataView()
+            document.getElementById('name').value = ''
+            document.getElementById('surname').value = ''
+        }
+    }
+
+    function dataView() {
+        console.log(list)
+        let print = ''
+        list.map((i, index) => {
+            print += `<tr><td>${i.name}</td><td>${i.surname}</td><td><button onclick=deleteData(${index})>DELETE</button></td><td><button onclick=updateData(${index})>UPDATE</button></td></tr>`
+        })
+        document.getElementById('printData').innerHTML = print
+    }
+
+    function deleteData(index) {
+        list.splice(index, 1)
+        dataView()
+    }
+
+    function updateData(index) {
+        editId = index
+        const editData = list[index]
+        document.getElementById('name').value = editData.name
+        document.getElementById('surname').value = editData.surname
+    }
+
+</script>
+
+
+<input type="text" name="" id="name">
+<p id="name-error"></p>
+<br><br>
+<input type="text" name="" id="surname">
+<p id="surname-error"></p>
+<br><br>
+<button onclick="createData()">Submit</button>
+
+
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Surname</td>
+        <td>DELETE</td>
+        <td>UPDATE</td>
+    </tr>
+    <tbody id="printData">
+
+    </tbody>
+</table>

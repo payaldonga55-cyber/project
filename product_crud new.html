@@ -1,0 +1,115 @@
+<script>
+let list=[]
+let editid=null
+function createData()
+{
+    const name = document.getElementById('name').value
+    const image=document.getElementById('image').value
+    const price =document.getElementById('price').value
+    const discount = document.getElementById('discount').value
+    let obj={name,image,price,discount}
+    if(!name)
+    {
+        document.getElementById('name-error').innerText='Enter Name'        
+    }
+    else
+    {
+        document.getElementById('name-error').innerText=""
+    } 
+    if(!image)
+    {
+        document.getElementById('image-error').innerText='Enter Url'        
+    }
+    else
+    {
+        document.getElementById('image-error').innerText=""
+    }   
+    if(!price)
+    {
+        document.getElementById('price-error').innerText='Enter price'        
+    }
+    else
+    {
+        document.getElementById('price-error').innerText=""
+    }
+    if(!discount)
+    {
+        document.getElementById('discount-error').innerText='Enter discount'        
+    }
+    else
+    {
+        document.getElementById('discount-error').innerText=""
+    }
+    if(name && price && discount)
+    {
+        if(editid!=null)
+        {
+            list[editid]=obj
+            editid=null
+        }
+        else
+        {
+            list.push(obj)  
+        }        
+        dataView()
+        document.getElementById('name').value=""
+        document.getElementById('image').value=""
+        document.getElementById('price').value=""
+        document.getElementById('discount').value=""
+    }    
+}
+function dataView()
+{
+    console.log(list)
+    let print=''
+    list.map((i,index)=>{
+        print+=
+            `<div>
+            <h3>Product ${index + 1}</h3>
+            <p>Name: ${i.name}</p>
+            <p>
+                Image:
+                <img src="${i.image}" width="100" height="100">
+            </p>
+            <p>Price: <s>${i.price}</s></p>
+            <p>Discount: ${i.discount}</p>
+            <button onclick="deleteData(${index})">Delete</button>
+            <button onclick="updateData(${index})">Update</button>
+            <hr>
+            </div>`
+    })
+    document.getElementById('printdata').innerHTML=print
+}
+function deleteData(index)
+{
+    list.splice(index,1)
+    dataView()
+}
+function updateData(index)
+{
+    editid=index
+    const editData = list[index]
+    document.getElementById('name').value=editData.name
+    document.getElementById('image').value=editData.image
+    document.getElementById('price').value=editData.price
+    document.getElementById('discount').value=editData.discount
+}
+</script>
+<h1>Product</h1>
+Name:<input type="text" name="" id="name">
+<p id="name-error"></p>
+<!-- <br><br>  -->
+ Image:<input type="url" name="" id="image">
+ <p id="image-error"></p>
+<!-- <br><br> -->
+Price<input type="number" name="" id="price">
+<p id="price-error"></p>
+<!-- <br><br> -->
+Discount<input type="number" name="" id="discount">
+<p id="discount-error"></p>
+<!-- <br><br> -->
+<button onclick="createData()">Submit</button>
+<div id="printdata"></div>
+
+
+
